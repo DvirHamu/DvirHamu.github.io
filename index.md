@@ -3,7 +3,7 @@ layout: default
 ---
 # Who Am I
 
-### Large image
+###
 
 ![Branching](Profile Picture.png)
 
