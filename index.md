@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
-# Header 1
-Who Am I
+# Who Am I
 
 ### Large image
 
