@@ -1,0 +1,277 @@
+a {
+    color: inherit; /* Keeps the parent element's text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 18px; /* Increases the font size */
+    font-weight: bold; /* Makes it stand out */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+a:hover {
+    color: #0073b1; /* Adds a hover color effect */
+    transform: scale(1.05); /* Slightly enlarges the text on hover */
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* HEADER SPACING */
+.left-aligned-header {
+    padding-top: 10px;  
+    margin-top: 0;      
+}
+
+.main-header {
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.sub-header {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* INTRO TEXT */
+.intro-text {
+    font-size: 1.5rem;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+/* LOADING SCREEN STYLES */
+#intro-screen {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00ff00;
+    font-size: 2em;
+    transition: opacity 1.5s ease-out;
+}
+
+.hacker-text {
+    font-size: 6em;
+    font-family: monospace;
+    color: #00ff00;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #00ff00;
+    margin-bottom: 20px;
+}
+
+.access-text {
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    margin-top: -10px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* NAVIGATION */
+header {
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: underline;
+}
+
+nav ul li {
+    display: inline;
+    text-align: left;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* PROFILE PICTURE */
+
+
+/* PROJECTS SECTION */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Reduced spacing */
+    padding: 20px;
+}
+
+.project-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* CERTIFICATIONS SECTION */
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px; /* Reduced spacing between certs */
+}
+
+.cert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 220px;
+}
+
+/* MAKE ENTIRE BOX CLICKABLE */
+.cert-item a, .project-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove underline */
+    color: inherit;
+}
+
+/* CERTIFICATION IMAGES */
+.cert-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.cert-item:hover, .project-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s ease-in-out, background 0.4s ease-in-out;
+}
+
+/* Smooth color transition on hover */
+a:hover {
+    color: #cccccc; /* Subtle color change on hover (optional) */
+}
+
+#about {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+footer {
+    background-color: #222;  /* Dark background for contrast */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.contact, .resume {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+footer a {
+    color: #ffcc00; /* Highlighted links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    background-color: #000000; /* LinkedIn Blue */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+}
+
+.button:hover {
+    background-color: #2d3b45; /* Darker shade on hover */
+}
+
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Adds space between image and text */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.profile-pic {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+.CTF-image {
+    width: 1000px; /* Adjust size as needed */
+    height: auto;
+}
+
+.intro-text {
+    max-width: 600px;
+    font-size: 1.5rem;
+}
+
+
+/* MATRIX EFFECT */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+section {
+    scroll-margin-top: 80px; /* Adjust the value for the gap size */
+}
+
