@@ -361,3 +361,8 @@ section {
         gap: 15px;
     }
 }
+@media (max-width: 768px) {
+    #matrix {
+        opacity: 0.5; /* Make it less prominent on mobile */
+    }
+}
