@@ -363,6 +363,9 @@ section {
 }
 @media (max-width: 768px) {
     #matrix {
-        opacity: 0.5; /* Make it less prominent on mobile */
+        width: 80%;       /* 80% of the viewport width */
+        height: 80%;      /* 80% of the viewport height */
+        top: 10%;         /* Center vertically by adding top margin */
+        left: 10%;        /* Center horizontally by adding left margin */
     }
 }
