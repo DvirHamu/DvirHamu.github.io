@@ -104,9 +104,6 @@ nav ul li a {
     cursor: pointer;
 }
 
-/* PROFILE PICTURE */
-
-
 /* PROJECTS SECTION */
 #projects {
     display: flex;
@@ -188,6 +185,7 @@ a:hover {
     text-align: center;
     padding: 50px 20px;
 }
+
 footer {
     background-color: #222;  /* Dark background for contrast */
     color: white;
@@ -237,7 +235,6 @@ footer a:hover {
     background-color: #2d3b45; /* Darker shade on hover */
 }
 
-
 .about-container {
     display: flex;
     align-items: center;
@@ -261,7 +258,6 @@ footer a:hover {
     font-size: 1.5rem;
 }
 
-
 /* MATRIX EFFECT */
 #matrix {
     position: fixed;
@@ -271,7 +267,97 @@ footer a:hover {
     height: 100%;
     z-index: -1;
 }
+
 section {
     scroll-margin-top: 80px; /* Adjust the value for the gap size */
 }
 
+/* Specific styles for CTF images */
+.ctf-link .CTF-image {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer; /* Changes mouse pointer to indicate clickability */
+}
+
+.ctf-link:hover .CTF-image {
+    transform: scale(1.05);       /* Slightly enlarge the image */
+    filter: brightness(1.2);      /* Make it brighter on hover */
+}
+
+/* ================================================
+   Responsive Adjustments for Mobile Screens
+=================================================== */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 3rem;
+    }
+    
+    .sub-header {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.2rem;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .projects-container, .certifications-container {
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .project-item, .cert-item {
+        padding: 20px;
+    }
+    
+    .profile-pic {
+        width: 150px;
+    }
+    
+    .CTF-image {
+        width: 90%; /* Make image width relative to viewport */
+        height: auto;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header, footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        font-size: 2.5rem;
+    }
+    
+    .sub-header {
+        font-size: 1.8rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+    }
+    
+    nav ul li {
+        font-size: 1rem;
+    }
+    
+    .button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
