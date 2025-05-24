@@ -1,4 +1,4 @@
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
+document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -95,3 +95,19 @@
 
         setTimeout(randomizeLetters, 1000);
     });
+
+    function resizeMatrixCanvas() {
+        const canvas = document.getElementById('matrix');
+        const dpr = window.devicePixelRatio || 1;
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+        ctx.scale(dpr, dpr); // Scale for high-DPI
+    }
+
+    window.addEventListener('resize', resizeMatrixCanvas);
+    window.addEventListener('orientationchange', resizeMatrixCanvas);
+    resizeMatrixCanvas(); // Call on load
